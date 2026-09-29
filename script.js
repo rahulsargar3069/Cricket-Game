@@ -36,8 +36,19 @@
             result = 'Match Won By - Computer.';
         }
 
-        alert(`
-             User Choice : ${userChoice} ; Computer Choice : ${computerChoice} 
-             ${result}
-             ${score.displayScore()} `)
+        // Update score on screen
+        document.querySelector('.scoreDisplay').textContent = score.displayScore();
+        
+        //Update choice result
+        document.querySelector('.resultScore').textContent = `
+        User Choice : ${userChoice} ; Computer Choice : ${computerChoice} ; 
+        ${result}`
+        }
+       function resetScore() {
+            score.win = 0;
+            score.loss = 0;
+            score.tie = 0;
+
+            document.querySelector('.scoreDisplay').textContent = score.displayScore();
+             document.querySelector('.resultScore').textContent = `Result Loading...`
         }

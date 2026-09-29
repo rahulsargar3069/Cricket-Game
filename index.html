@@ -8,10 +8,23 @@
     <main>
     <h1>Cricket Game</h1>
     <div class="btn">
-    <button class="Bat" onclick="playGame('Bat')">BAT</button>
-    <button class="Ball" onclick="playGame('Ball')">BALL</button>
-    <button class="Stump" onclick="playGame('Stump')">STUMP</button>
+    <button class="Bat" onclick="playGame('Bat')">
+        <img src="bat.png" alt="" srcset="">
+    </button>
+    <button class="Ball" onclick="playGame('Ball')">
+        <img src="ball.png" alt="" srcset="">
+    </button>
+    <button class="Stump" onclick="playGame('Stump')">
+        <img src="stump.png" alt="" srcset="">
+    </button>
     </div>
+
+    <!-- display Score -->
+     <p class="resultScore">Result Here....</p>
+     <h3 class="scoreDisplay">Score > Win : 0 , Loss : 0 , Tie : 0</h3>
+     
+     <!-- reset button -->
+      <button class="resetBtn" onclick="resetScore()">Reset</button>
     </main>
     <script src="script.js"></script>
 </body>
