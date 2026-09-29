@@ -3,8 +3,11 @@
             win : 0,
             loss : 0,
             tie : 0,
+            displayScore : function () {
+                return `Score > Win : ${score.win} , Loss : ${score.loss} , Tie : ${score.tie}`
+            }
         }
-       //this will generete random number betn 0 to 3
+    //this will generete random number betn 0 to 3
       function playGame(userChoice) { 
 
         let randomNum = Math.random()*3;
@@ -36,5 +39,5 @@
         alert(`
              User Choice : ${userChoice} ; Computer Choice : ${computerChoice} 
              ${result}
-             Score > Win : ${score.win} , Loss : ${score.loss} , Tie : ${score.tie}`)
+             ${score.displayScore()} `)
         }
